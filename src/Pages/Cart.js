@@ -4,7 +4,7 @@ import Navbar from "../Components/Navbar";
 import CartCard from "../Components/ItemCart";
 import { ShopContext } from "../Components/Context";
 import { plantList } from "../Components/ItemInfo";
-
+import { Link } from "react-router-dom";
 export default function Cart() {
   const {
     cartItems,
@@ -53,9 +53,12 @@ export default function Cart() {
           <div>
             <div className="text-center py-2">Subtotal: ${totalAmount}</div>
             <div className="grid">
-              <button className="py-2 border-2 border-black hover:border-white hover:text-white hover:bg-black">
+              <Link
+                to={"/"}
+                className="py-2 border-2 border-black hover:border-white hover:text-white hover:bg-black"
+              >
                 Continue Shopping
-              </button>
+              </Link>
               <br />
               <button
                 className="py-2 border-2 mb-12 border-black hover:border-white hover:text-white hover:bg-black"
@@ -78,9 +81,12 @@ export default function Cart() {
                 className="py-10 mx-auto"
               ></img>
             </div>
-            <button className="m-10 py-2 border-2 border-black hover:border-white hover:text-white hover:bg-black">
+            <Link
+              to="/"
+              className="m-10 py-2 border-2 border-black hover:border-white hover:text-white hover:bg-black"
+            >
               Continue Shopping
-            </button>
+            </Link>
           </div>
         )}
       </div>
